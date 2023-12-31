@@ -1,0 +1,11 @@
+{
+  "name": "S3BucketUpload",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "mhgarry <mhgarry92@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.1528.0",
+    "dotenv": "^16.3.1"
+  }
+}
