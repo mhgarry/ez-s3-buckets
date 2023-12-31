@@ -15,37 +15,49 @@
 
 ## Introduction
 
-Easy S3 Buckets simplifies the process of creating and managing Amazon S3 buckets. Designed for efficiency, it's particularly useful for handling large data files, such as music, in a data-intensive environment.
+Easy S3 Buckets is designed to simplify the process of creating and managing Amazon S3 buckets, making it particularly useful for handling large data files, such as music, in data-intensive environments. This tool offers a streamlined approach for direct file and directory uploads to S3 buckets, bypassing the need for navigating through the AWS S3 UI.
 
 ## Licensing
 
-Licensed under the MIT License. For more information, visit [MIT License](https://opensource.org/licenses/MIT).
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+This project is licensed under the MIT License. For more information, see the [MIT License](https://opensource.org/licenses/MIT).
+
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ## Features
 
-- Direct file and directory uploads to Amazon S3 buckets.
-- Creation of new S3 buckets.
-- Streamlined user interface bypassing AWS S3 UI for bulk uploads.
+- Efficient creation of new S3 buckets.
+- Direct uploading of files and directories to Amazon S3 buckets.
+- User-friendly interface for bulk uploads, avoiding the complexity of AWS S3 UI.
 
 ## Installation
 
-To install, clone the repository and run `yarn` in the root directory. For detailed instructions on cloning a repository, visit [GitHub Docs](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
+Clone the repository and run `yarn` or `npm install` in the root directory to install dependencies. For more information on how to clone a repository, visit [GitHub Docs on Cloning a Repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
 
 ## Usage
 
-Ensure Node.js and Yarn are installed. Fill out the `.example.env` file with AWS credentials and the desired bucket name. If you have AWS CLI configured, you won't need to include keys in the script. Adjust class variables to match your desired upload directories.
+Ensure Node.js and Yarn/npm are installed on your machine. Configure your AWS credentials as described below:
+
+1. **AWS CLI Configured**: The script will automatically use the AWS CLI settings if configured on your machine. No further setup is required.
+
+2. **Without AWS CLI**: If AWS CLI is not configured, create a `.env` file from the `.example.env` template and fill in your AWS credentials.
+
+   ```plaintext
+   AWS_ACCESS_KEY=your_aws_access_key
+   AWS_SECRET_ACCESS_KEY=your_aws_secret_access_key
+   ```
+
+After setting up your .env file, the script will connect to your AWS account using these credentials. If using AWS CLI, this step is not necessary.
 
 ## Packages
 
-- `aws-sdk`: Required for communication with AWS, enabling the application to upload files to S3 buckets.
-- `fs`: Enables Node.js to read and write files, accessing the filesystem for file uploads.
-- `path`: Essential for handling the filesystem within the repository, guiding the application to locate files for upload.
+- `aws-sdk`: For communication with AWS services, enabling file uploads to S3 buckets.
+- `fs`: For reading and writing files, accessing the filesystem.
+- `path`: For handling filesystem paths within the repository, locating files for upload.
 
 ## How to Contribute
 
-Contributors can fork and clone this repository, then submit a pull request. Please open issues for any bugs or feature suggestions.
+Fork and clone this repository to contribute. Submit pull requests for proposed changes and open issues for any bugs or feature suggestions.
 
 ## Contact
 
-For further questions, reach me at mhgarry92@gmail.com. Visit my [GitHub](https://github.com/mhgarry92) for more projects.
+For questions or more information, reach out at <mhgarry92@gmail.com> or visit my [Github Profile](https://github.com/mhgarry)
